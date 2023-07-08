@@ -1,0 +1,23 @@
+name: drupal
+services:
+  appserver:
+    type: php:8.2
+    via: nginx
+    webroot: ./web
+    xdebug: true
+  database:
+    type: mariadb
+    creds:
+      user: drupal
+      password: drupal
+      database: drupal
+  mailhog:
+    type: mailhog
+    portforward: true
+    hogfrom:
+      - appserver
+proxy:
+  mailhog:
+    - mail.drupal.lndo.site
+  appserver:
+    - drupal.lndo.site
