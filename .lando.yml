@@ -1,23 +1,36 @@
 name: drupal
+recipe: lamp
+config:
+  webroot: ./web
+  php: 8.2
+  database: mariadb
 services:
-  appserver:
-    type: php:8.2
-    via: nginx
-    webroot: ./web
-    xdebug: true
-  database:
+  db_default:
     type: mariadb
     creds:
       user: drupal
       password: drupal
       database: drupal
+  db_youphrases:
+    type: mariadb
+    creds:
+      user: drupal
+      password: drupal
+      database: drupal
+  appserver:
+    xdebug: true
   mailhog:
     type: mailhog
     portforward: true
     hogfrom:
       - appserver
+tooling:
+  drush:
+    service: appserver
+    cmd: drush --root=/app/
 proxy:
   mailhog:
     - mail.drupal.lndo.site
   appserver:
-    - drupal.lndo.site
+    - default.lndo.site
+    - youphrases.lndo.site
