@@ -861,12 +861,12 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
 $databases['default']['default'] = array (
-  'database' => 'drupal',
-  'username' => 'drupal',
-  'password' => 'drupal',
+  'database' => $_ENV['DB_DATABASE_YOUPHRASES'],
+  'username' => $_ENV['DB_USER_YOUPHRASES'],
+  'password' => $_ENV['DB_PASS_YOUPHRASES'],
   'prefix' => '',
-  'host' => 'db_youphrases',
-  'port' => '3306',
+  'host' => $_ENV['DB_HOST_YOUPHRASES'],
+  'port' => $_ENV['DB_PORT_YOUPHRASES'],
   'isolation_level' => 'READ COMMITTED',
   'namespace' => 'Drupal\\mysql\\Driver\\Database\\mysql',
   'driver' => 'mysql',

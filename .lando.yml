@@ -4,6 +4,8 @@ config:
   webroot: ./web
   php: 8.2
   database: mariadb
+env_file:
+  - defaults.env
 services:
   db_default:
     type: mariadb

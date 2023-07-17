@@ -5,6 +5,9 @@
 # follows official upstream conventions:
 # https://www.drupal.org/docs/develop/using-composer
 
+# Ignore env files
+*.env
+
 # Ignore paths that may contain user-generated content
 /web/sites/*/files
 /web/sites/*/public
