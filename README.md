@@ -15,15 +15,16 @@ create env variable file: `defaults.env`
 
 paste following credentials for local env
 ```
-DB_HOST_DEFAULT=db_default
-DB_DATABASE_DEFAULT=drupal
-DB_USER_DEFAULT=drupal
-DB_PASS_DEFAULT=drupal
-DB_PORT_DEFAULT=3306
-
-DB_HOST_YOUPHRASES=db_youphrases
-DB_DATABASE_YOUPHRASES=drupal
-DB_USER_YOUPHRASES=drupal
-DB_PASS_YOUPHRASES=drupal
-DB_PORT_YOUPHRASES=3306
+DB_HOST=database
+DB_USER=drupal
+DB_PASS=drupal
+DB_PORT=3306
+AH_SITE_ENVIRONMENT=local
 ```
+For every site you will need to update
+```web/sites/sites.php```
+
+With following properties : ```$sites["website_url"] = 'webside_label';```
+
+and database for website in lando configuration:
+```- mysql -h database -P 3306 -u root -e "CREATE DATABASE IF NOT EXISTS db_{webside_label}; GRANT ALL PRIVILEGES ON db_{webside_label}.* TO 'drupal'@'%' IDENTIFIED by 'drupal';"```
