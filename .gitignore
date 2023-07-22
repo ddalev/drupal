@@ -8,6 +8,13 @@
 # Ignore env files
 *.env
 
+# Ignore contrib modules. These should be created during build process.
+web/modules/contrib
+web/themes/contrib
+web/profiles/contrib
+web/libraries
+drush/Commands
+
 # Ignore paths that may contain user-generated content
 /web/sites/*/files
 /web/sites/*/public

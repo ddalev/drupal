@@ -887,3 +887,9 @@ if (file_exists($app_root . "/sites/default/settings/{$_ENV['AH_SITE_ENVIRONMENT
 if (file_exists($app_root . '/' . $site_path . "/settings/{$_ENV['AH_SITE_ENVIRONMENT']}.settings.php")) {
   include $app_root . '/' . $site_path . "/settings/{$_ENV['AH_SITE_ENVIRONMENT']}.settings.php";
 }
+
+/**
+ * Different config for multisite.
+ */
+$config['config_split.config_split.' . $siteLabel]['status'] = TRUE;
+$config['config_split.config_split.default']['status'] = TRUE;
