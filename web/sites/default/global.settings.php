@@ -888,8 +888,8 @@ if (file_exists($app_root . '/' . $site_path . "/settings/{$_ENV['AH_SITE_ENVIRO
   include $app_root . '/' . $site_path . "/settings/{$_ENV['AH_SITE_ENVIRONMENT']}.settings.php";
 }
 
+$settings['config_sync_directory'] = '../config/default';
 /**
  * Different config for multisite.
  */
 $config['config_split.config_split.' . $siteLabel]['status'] = TRUE;
-$config['config_split.config_split.default']['status'] = TRUE;

@@ -1,0 +1,18 @@
+uuid: f9f92b39-0638-4215-8acc-5db457ca9ae7
+langcode: en-gb
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Phrases
+type: phrases
+description: 'this is a content type of phrases'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true
