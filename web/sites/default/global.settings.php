@@ -876,6 +876,10 @@ $databases['default']['default'] = array (
   'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
 );
 
+
+$settings['config_sync_directory'] = '../config/default';
+$config['system.site']['mail'] = $_ENV['SYSTEM_EMAIL'];
+
 // Include the site global settings if exists.
 if (file_exists($app_root . '/' . $site_path . "/global.settings.php")) {
   include $app_root . '/' . $site_path . "/global.settings.php";

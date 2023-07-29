@@ -20,6 +20,7 @@ DB_USER=drupal
 DB_PASS=drupal
 DB_PORT=3306
 AH_SITE_ENVIRONMENT=local
+SYSTEM_EMAIL=your.email@website.com
 ```
 Create `salt.txt` isnide root directory and paste hash
 you can generate one for your project with following command :
