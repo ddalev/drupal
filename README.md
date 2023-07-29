@@ -21,6 +21,10 @@ DB_PASS=drupal
 DB_PORT=3306
 AH_SITE_ENVIRONMENT=local
 ```
+Create `salt.txt` isnide root directory and paste hash
+you can generate one for your project with following command :
+```drush -l youphrases.lndo.site eval "var_dump(Drupal\Component\Utility\Crypt::randomBytesBase64(55))"```
+
 For every site you will need to update
 ```web/sites/sites.php```
 

@@ -8,6 +8,9 @@
 # Ignore env files
 *.env
 
+# Ignore salt
+salt.txt
+
 # Ignore contrib modules. These should be created during build process.
 web/modules/contrib
 web/themes/contrib
