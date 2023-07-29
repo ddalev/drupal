@@ -2,8 +2,8 @@ _core:
   default_config_hash: l58O_yEXSo-SeJi19LXdzTU1tNJG3lmnIhCitRkM1tk
 langcode: en-gb
 uuid: 4ffa9e50-63ca-4535-91a9-78c4ed9c887a
-name: youphrases
-mail: dimitar.dalev@gmail.com
+name: 'website name'
+mail: example.user@example.site
 slogan: ''
 page:
   403: ''
