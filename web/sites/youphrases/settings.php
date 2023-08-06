@@ -7,3 +7,4 @@
 
 $siteLabel = 'youphrases';
 include $app_root . '/sites/default/global.settings.php';
+$settings['hash_salt'] = 'HASH_SALT';

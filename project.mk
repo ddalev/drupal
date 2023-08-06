@@ -1,0 +1,10 @@
+### PROJECT SETTINGS
+
+PROJECT_NAME=youphrases
+
+DB_HOST=database
+DB_USER=drupal
+DB_PASS=drupal
+DB_PORT=3306
+AH_SITE_ENVIRONMENT=local
+HASH_SALT='dHqaj4XzlIA1JcGTQCjW9A1WwZDc_AGe9bgwXD2vvvrpk4PH64ObisOO_ShFyDIs-tMj27bpgw'
