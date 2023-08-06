@@ -3,25 +3,20 @@ This is a generic drupal multi website
 
 In order to start the project you will need to have working [lando](https://lando.dev/download/) with docker
 
+***
+
 Execute following commands:
 
-`lando start`
+`make init`
 
-`lando ssh`
+`make start`
+
+`make shell`
 
 `composer install`
 
-create env variable file: `defaults.env`
+***
 
-paste following credentials for local env
-```
-DB_HOST=database
-DB_USER=drupal
-DB_PASS=drupal
-DB_PORT=3306
-AH_SITE_ENVIRONMENT=local
-SYSTEM_EMAIL=your.email@website.com
-```
 Create `salt.txt` isnide root directory and paste hash
 you can generate one for your project with following command :
 ```drush -l youphrases.lndo.site eval "var_dump(Drupal\Component\Utility\Crypt::randomBytesBase64(55))"```
