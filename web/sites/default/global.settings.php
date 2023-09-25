@@ -892,7 +892,7 @@ if (file_exists($app_root . '/' . $site_path . "/settings/{$_ENV['AH_SITE_ENVIRO
   include $app_root . '/' . $site_path . "/settings/{$_ENV['AH_SITE_ENVIRONMENT']}.settings.php";
 }
 
-$settings['config_sync_directory'] = '../config/default';
+$settings['config_sync_directory'] = "../config/{$siteLabel}";
 /**
  * Different config for multisite.
  */
