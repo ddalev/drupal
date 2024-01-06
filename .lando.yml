@@ -15,6 +15,7 @@ services:
     build_as_root:
       # Create databases for each drupal site using db_{lable} as a naming convention.
       - mysql -h database -P 3306 -u root -e "CREATE DATABASE IF NOT EXISTS db_youphrases; GRANT ALL PRIVILEGES ON db_youphrases.* TO 'drupal'@'%' IDENTIFIED by 'drupal';"
+      - mysql -h database -P 3306 -u root -e "CREATE DATABASE IF NOT EXISTS db_eltera; GRANT ALL PRIVILEGES ON db_eltera.* TO 'drupal'@'%' IDENTIFIED by 'drupal';"
   appserver:
     xdebug: true
   mailhog:
@@ -32,3 +33,4 @@ proxy:
   appserver:
     - default.lndo.site
     - youphrases.lndo.site
+    - eltera.lndo.site
